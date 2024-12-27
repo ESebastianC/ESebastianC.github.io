@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reporte_Estudiantes" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20987827-09af-4f49-a5c8-d315169b1ff0">
+    <property name="ireport.zoom" value="1.3310000000000004"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <queryString>
+        <![CDATA[SELECT * FROM estudiantes]]>
+    </queryString>
+    <field name="estCedula" class="java.lang.String"/>
+    <field name="estNombre" class="java.lang.String"/>
+    <field name="estApellido" class="java.lang.String"/>
+    <field name="estTelefono" class="java.lang.String"/>
+    <field name="estDireccion" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="100" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="10" width="555" height="30" uuid="9948c5cd-79b4-40fc-898e-bdf14260b6dd"/>
+                <textElement textAlignment="Center">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Reporte de Estudiantes]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="50" width="555" height="20" uuid="subtitulo-uta"/>
+                <textElement textAlignment="Center">
+                    <font size="12" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[Universidad Técnica de Ambato (UTA)]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="40" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="10" width="110" height="20" uuid="header-cedula"/>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Cédula]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="120" y="10" width="110" height="20" uuid="header-nombre"/>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Nombre]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="240" y="10" width="110" height="20" uuid="header-apellido"/>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Apellido]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="360" y="10" width="110" height="20" uuid="header-telefono"/>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Teléfono]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="480" y="10" width="75" height="20" uuid="header-direccion"/>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Dirección]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="25" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="2" width="110" height="20" uuid="field-cedula"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{estCedula}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="120" y="2" width="110" height="20" uuid="field-nombre"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{estNombre}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="240" y="2" width="110" height="20" uuid="field-apellido"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{estApellido}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="360" y="2" width="110" height="20" uuid="field-telefono"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{estTelefono}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="480" y="2" width="75" height="20" uuid="field-direccion"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{estDireccion}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="30" splitType="Stretch">
+            <textField>
+                <reportElement x="10" y="10" width="100" height="20" uuid="date-footer"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="450" y="10" width="100" height="20" uuid="page-footer"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

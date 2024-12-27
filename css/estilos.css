@@ -1,0 +1,78 @@
+body{
+    background: white ;
+}
+
+header{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+nav{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background: rgb(110, 7, 7);
+}
+nav ul{
+    display: flex;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    text-align: none;
+}
+nav ul li{
+    display: inline-block;
+    margin: auto;
+    width: 25%;
+    line-height: 50px;
+    list-style: none;
+    color: white;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+section{
+    position: relative;
+    padding: 5px;
+}
+footer{
+    background: rgb(110, 7, 7);
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+
+.parrafos{
+    color: blue;
+    text-align: center;
+}
+.titulos{
+    font-size: 25;
+}
+
+.contact {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.contact h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+.contact .form-control {
+    border: 2px solid #ccc;
+    transition: all 0.3s;
+}
+
+.contact .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

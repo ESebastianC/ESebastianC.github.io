@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <script src="js/operaciones.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.10.19/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.10.19/themes/icon.css">
+    <script type="text/javascript" src="jquery-easyui-1.10.19/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-easyui-1.10.19/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+    section {
+        float: left;
+        width: 50%;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/banner.jpeg" width="100%" height="150px"></img>
+        <h1 style="text-align: center;">CALCULADORA</h1>
+    </header>
+    <section >
+        <h2 style="text-align: center;">Cálculo Suma</h2>
+
+        <div style="margin-bottom:10px">
+            <input class="easyui-textbox" label="Numero 1" data-options="prompt:'Ingese un numero'" name="txtprimerN"
+                id="txtprimerN" style="width: 50% ;"></input>
+        </div>
+        <br></br>
+        <div style="margin-bottom:10px">
+            <input class="easyui-textbox" label="Numero 2" data-options="prompt:'Ingese un numero'" name="txtsegundoN"
+                id="txtsegundoN" style="width: 50% ;"></input>
+        </div>
+        <br></br>
+        <div>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-ok" style="width:10%;height:32px" name="btnSumar"
+                id="btnSumar" onclick="sumadeNumeros()">Calcular</a>
+        </div>
+        <br></br>
+        <p id="suma"></p>
+    </section>
+
+    <section >
+
+        <div >
+            <h2 style="text-align: center;">Cálculo Resta</h2>
+            <div style="margin-bottom:10px">
+                <input class="easyui-textbox" label="Numero 1" data-options="prompt:'Ingese un numero'"
+                    name="txtprimerResta" id="txtprimerResta" style="width: 50% ;"></input>
+            </div>
+            <br></br>
+            <div style="margin-bottom:10px">
+                <input class="easyui-textbox" label="Numero 2" data-options="prompt:'Ingese un numero'"
+                    name="txtsegundoResta" id="txtsegundoResta" style="width: 50% ;"></input>
+            </div>
+            <br></br>
+            <div>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-ok" style="width:10%;height:32px" name="btnRestar"
+                    id="btnRestar" onclick="restadeNumeros()">Calcular</a>
+            </div>
+            <br></br>
+
+            <p id="resta"></p>
+        </div>
+    </section>
+
+    <section >
+        <h2 style="text-align: center;">Cálculo Multiplicación</h2>
+        <div style="margin-bottom:10px">
+            <input class="easyui-textbox" label="Numero 1" data-options="prompt:'Ingese un numero'"
+                name="txtprimerMulti" id="txtprimerMulti" style="width: 50% ;"></input>
+        </div>
+        <br></br>
+        <div style="margin-bottom:10px">
+            <input class="easyui-textbox" label="Numero 2" data-options="prompt:'Ingese un numero'"
+                name="txtsegundoMulti" id="txtsegundoMulti" style="width: 50% ;"></input>
+        </div>
+        <br></br>
+        <div>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-ok" style="width:10%;height:32px" name="btnMultiplicar"
+                id="btnMultiplicar" onclick="multiplicacionNumeros()">Calcular</a>
+        </div>
+        <br></br>
+        <p id="multiplicacion"></p>
+    </section> 
+
+    <section>
+        <div >
+            <h2 style="text-align: center;">Cálculo División</h2>
+            <div style="margin-bottom:10px">
+                <input class="easyui-textbox" label="Numero 1" data-options="prompt:'Ingese un numero'"
+                    name="txtprimerDivision" id="txtprimerDivision" style="width: 50% ;"></input>
+            </div>
+            <br></br>
+            <div style="margin-bottom:10px">
+                <input class="easyui-textbox" label="Numero 2" data-options="prompt:'Ingese un numero'"
+                    name="txtsegundoDivision" id="txtsegundoDivision" style="width: 50% ;"></input>
+            </div>
+            <br></br>
+            <div>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-ok" style="width:10%;height:32px" name="btnDividir"
+                    id="btnDividir" onclick="dividisionNumeros()">Calcular</a>
+            </div>
+            <br></br>
+            <p id="division"></p>
+        </div>
+    </section>
+
+    
+</body>
+
+</html>
